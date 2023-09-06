@@ -32,10 +32,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lvResumen = new System.Windows.Forms.ListView();
+            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.btnResumen = new System.Windows.Forms.Button();
             this.cboLetras = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.lvDetalle = new System.Windows.Forms.ListView();
             this.btnAdquirir = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -52,6 +53,12 @@
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lvDetalle = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -92,11 +99,26 @@
             // 
             // lvResumen
             // 
+            this.lvResumen.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader7});
+            this.lvResumen.GridLines = true;
             this.lvResumen.Location = new System.Drawing.Point(166, 20);
             this.lvResumen.Name = "lvResumen";
-            this.lvResumen.Size = new System.Drawing.Size(283, 97);
+            this.lvResumen.Size = new System.Drawing.Size(283, 103);
             this.lvResumen.TabIndex = 3;
             this.lvResumen.UseCompatibleStateImageBehavior = false;
+            this.lvResumen.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "N° Letras";
+            this.columnHeader6.Width = 142;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Monto";
+            this.columnHeader7.Width = 136;
             // 
             // btnResumen
             // 
@@ -106,6 +128,7 @@
             this.btnResumen.TabIndex = 2;
             this.btnResumen.Text = "MOSTRAR RESUMEN";
             this.btnResumen.UseVisualStyleBackColor = true;
+            this.btnResumen.Click += new System.EventHandler(this.btnResumen_Click);
             // 
             // cboLetras
             // 
@@ -124,14 +147,6 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Seleccione Letras";
             // 
-            // lvDetalle
-            // 
-            this.lvDetalle.Location = new System.Drawing.Point(9, 250);
-            this.lvDetalle.Name = "lvDetalle";
-            this.lvDetalle.Size = new System.Drawing.Size(609, 97);
-            this.lvDetalle.TabIndex = 28;
-            this.lvDetalle.UseCompatibleStateImageBehavior = false;
-            // 
             // btnAdquirir
             // 
             this.btnAdquirir.Location = new System.Drawing.Point(494, 209);
@@ -140,6 +155,7 @@
             this.btnAdquirir.TabIndex = 27;
             this.btnAdquirir.Text = "ADQUIRIR";
             this.btnAdquirir.UseVisualStyleBackColor = true;
+            this.btnAdquirir.Click += new System.EventHandler(this.btnAdquirir_Click);
             // 
             // groupBox2
             // 
@@ -278,15 +294,55 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "VENTA DE PRODUCTOS AL CRÉDITO";
             // 
+            // lvDetalle
+            // 
+            this.lvDetalle.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.lvDetalle.GridLines = true;
+            this.lvDetalle.Location = new System.Drawing.Point(9, 250);
+            this.lvDetalle.Name = "lvDetalle";
+            this.lvDetalle.Size = new System.Drawing.Size(609, 106);
+            this.lvDetalle.TabIndex = 32;
+            this.lvDetalle.UseCompatibleStateImageBehavior = false;
+            this.lvDetalle.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ITEM";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "DESCRIPCION DEL PRODUCTO";
+            this.columnHeader2.Width = 215;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "CANTIDAD";
+            this.columnHeader3.Width = 110;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "PRECIO";
+            this.columnHeader4.Width = 110;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "SUBTOTAL";
+            this.columnHeader5.Width = 110;
+            // 
             // frmCredito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 491);
+            this.ClientSize = new System.Drawing.Size(634, 498);
+            this.Controls.Add(this.lvDetalle);
             this.Controls.Add(this.lblMonto);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.lvDetalle);
             this.Controls.Add(this.btnAdquirir);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lblHora);
@@ -297,6 +353,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmCredito";
             this.Text = "Venta de productos al crédito";
+            this.Load += new System.EventHandler(this.frmCredito_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -317,7 +374,6 @@
         private Button btnResumen;
         private ComboBox cboLetras;
         private Label label5;
-        private ListView lvDetalle;
         private Button btnAdquirir;
         private GroupBox groupBox2;
         private TextBox txtCantidad;
@@ -334,5 +390,13 @@
         private TextBox txtCliente;
         private Label label2;
         private Label label1;
+        private ListView lvDetalle;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
+        private ColumnHeader columnHeader4;
+        private ColumnHeader columnHeader5;
+        private ColumnHeader columnHeader6;
+        private ColumnHeader columnHeader7;
     }
 }

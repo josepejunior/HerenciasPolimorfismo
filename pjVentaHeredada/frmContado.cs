@@ -14,7 +14,12 @@ namespace pjVentaHeredada
     public partial class frmContado : Form
     {
         static string[] productos = { "Lavadora", "Refrigeradora", 
-            "Licuadora", "Extractora", "Radiograbadora", "DVD", "BluRay" };
+            "Licuadora", "Extractora", "Radiograbadora", "DVD", 
+            "BluRay" };
+
+        //Variable acumuladora total
+        double tSubtotal = 0;
+
         public frmContado()
         {
             InitializeComponent();
@@ -58,8 +63,29 @@ namespace pjVentaHeredada
             fila.SubItems.Add(objC.Producto);
             fila.SubItems.Add(objC.Cantidad.ToString());
             fila.SubItems.Add(objC.AsignaPrecio().ToString("C"));
-            fila.SubItems.Add(objC.CalculaSubtotal().ToString());
+            fila.SubItems.Add(objC.CalculaSubtotal().ToString("C"));
             lvDetalle.Items.Add(fila);
+            Listado(objC);
+        }
+
+        private void Listado(Contado objC)
+        {
+            tSubtotal += objC.CalculaSubtotal();
+            lstResumen.Items.Clear();
+            lstResumen.Items.Add("** RESUMEN DE VENTA ** ");
+            lstResumen.Items.Add("----------------------------------------");
+            lstResumen.Items.Add($"CLIENTE: {objC.Cliente}");
+            lstResumen.Items.Add($"RUC: {objC.RUC}");
+            lstResumen.Items.Add($"FECHA: {objC.Fecha}");
+            lstResumen.Items.Add($"HORA: {objC.Hora}");
+            lstResumen.Items.Add("----------------------------------------");
+            lstResumen.Items.Add($"SUBTOTAL: {tSubtotal.ToString("C")}");
+            double descuento = objC.CalculaDescuento(tSubtotal);
+            double neto = objC.CalculaNeto(tSubtotal, descuento);
+            lstResumen.Items.Add($"DESCUENTO: {descuento.ToString("C")}");
+            lstResumen.Items.Add($"NETO: {neto.ToString("C")}");
+
+            lblNeto.Text = neto.ToString("C");
         }
     }
 }

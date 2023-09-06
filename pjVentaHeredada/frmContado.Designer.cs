@@ -104,9 +104,10 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
+            this.lvDetalle.GridLines = true;
             this.lvDetalle.Location = new System.Drawing.Point(8, 246);
             this.lvDetalle.Name = "lvDetalle";
-            this.lvDetalle.Size = new System.Drawing.Size(609, 97);
+            this.lvDetalle.Size = new System.Drawing.Size(609, 102);
             this.lvDetalle.TabIndex = 22;
             this.lvDetalle.UseCompatibleStateImageBehavior = false;
             this.lvDetalle.View = System.Windows.Forms.View.Details;
@@ -257,6 +258,30 @@
             this.label1.Size = new System.Drawing.Size(345, 25);
             this.label1.TabIndex = 14;
             this.label1.Text = "VENTA DE PRODUCTOS AL CONTADO";
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ITEM";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "DESCRIPCION DEL PRODUCTO";
+            this.columnHeader2.Width = 215;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "CANTIDAD";
+            this.columnHeader3.Width = 110;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "PRECIO";
+            this.columnHeader4.Width = 110;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "SUBTOTAL";
+            this.columnHeader5.Width = 110;
             // 
             // frmContado
             // 
