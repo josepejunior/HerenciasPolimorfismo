@@ -68,7 +68,7 @@
             // 
             this.lblMonto.AutoSize = true;
             this.lblMonto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMonto.Location = new System.Drawing.Point(505, 412);
+            this.lblMonto.Location = new System.Drawing.Point(512, 414);
             this.lblMonto.Name = "lblMonto";
             this.lblMonto.Size = new System.Drawing.Size(66, 21);
             this.lblMonto.TabIndex = 31;
@@ -78,7 +78,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(479, 382);
+            this.label7.Location = new System.Drawing.Point(470, 382);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(154, 21);
             this.label7.TabIndex = 30;
@@ -92,7 +92,7 @@
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Location = new System.Drawing.Point(9, 362);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(464, 123);
+            this.groupBox3.Size = new System.Drawing.Size(452, 123);
             this.groupBox3.TabIndex = 29;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "OPCIONES DEL CRÉDITO";
@@ -149,7 +149,7 @@
             // 
             // btnAdquirir
             // 
-            this.btnAdquirir.Location = new System.Drawing.Point(494, 209);
+            this.btnAdquirir.Location = new System.Drawing.Point(479, 208);
             this.btnAdquirir.Name = "btnAdquirir";
             this.btnAdquirir.Size = new System.Drawing.Size(100, 23);
             this.btnAdquirir.TabIndex = 27;
@@ -206,7 +206,7 @@
             // lblHora
             // 
             this.lblHora.AutoSize = true;
-            this.lblHora.Location = new System.Drawing.Point(580, 107);
+            this.lblHora.Location = new System.Drawing.Point(554, 107);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(38, 15);
             this.lblHora.TabIndex = 25;
@@ -215,7 +215,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(580, 81);
+            this.label6.Location = new System.Drawing.Point(554, 81);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 15);
             this.label6.TabIndex = 24;
@@ -305,7 +305,7 @@
             this.lvDetalle.GridLines = true;
             this.lvDetalle.Location = new System.Drawing.Point(9, 250);
             this.lvDetalle.Name = "lvDetalle";
-            this.lvDetalle.Size = new System.Drawing.Size(609, 106);
+            this.lvDetalle.Size = new System.Drawing.Size(615, 106);
             this.lvDetalle.TabIndex = 32;
             this.lvDetalle.UseCompatibleStateImageBehavior = false;
             this.lvDetalle.View = System.Windows.Forms.View.Details;
@@ -327,12 +327,12 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "PRECIO";
-            this.columnHeader4.Width = 110;
+            this.columnHeader4.Width = 111;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "SUBTOTAL";
-            this.columnHeader5.Width = 110;
+            this.columnHeader5.Width = 115;
             // 
             // frmCredito
             // 

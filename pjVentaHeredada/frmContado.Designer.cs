@@ -33,6 +33,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lvDetalle = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.btnAdquirir = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -49,11 +54,6 @@
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +71,7 @@
             // 
             this.lblNeto.AutoSize = true;
             this.lblNeto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNeto.Location = new System.Drawing.Point(493, 403);
+            this.lblNeto.Location = new System.Drawing.Point(504, 409);
             this.lblNeto.Name = "lblNeto";
             this.lblNeto.Size = new System.Drawing.Size(66, 21);
             this.lblNeto.TabIndex = 25;
@@ -81,7 +81,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(493, 377);
+            this.label11.Location = new System.Drawing.Point(478, 377);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(123, 21);
             this.label11.TabIndex = 24;
@@ -112,9 +112,33 @@
             this.lvDetalle.UseCompatibleStateImageBehavior = false;
             this.lvDetalle.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ITEM";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "DESCRIPCION DEL PRODUCTO";
+            this.columnHeader2.Width = 215;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "CANTIDAD";
+            this.columnHeader3.Width = 110;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "PRECIO";
+            this.columnHeader4.Width = 110;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "SUBTOTAL";
+            this.columnHeader5.Width = 110;
+            // 
             // btnAdquirir
             // 
-            this.btnAdquirir.Location = new System.Drawing.Point(493, 205);
+            this.btnAdquirir.Location = new System.Drawing.Point(481, 204);
             this.btnAdquirir.Name = "btnAdquirir";
             this.btnAdquirir.Size = new System.Drawing.Size(100, 23);
             this.btnAdquirir.TabIndex = 21;
@@ -171,7 +195,7 @@
             // lblHora
             // 
             this.lblHora.AutoSize = true;
-            this.lblHora.Location = new System.Drawing.Point(579, 103);
+            this.lblHora.Location = new System.Drawing.Point(555, 103);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(38, 15);
             this.lblHora.TabIndex = 19;
@@ -180,7 +204,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(579, 77);
+            this.label6.Location = new System.Drawing.Point(555, 77);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 15);
             this.label6.TabIndex = 18;
@@ -189,7 +213,7 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(478, 103);
+            this.lblFecha.Location = new System.Drawing.Point(473, 103);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(38, 15);
             this.lblFecha.TabIndex = 17;
@@ -198,7 +222,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(478, 77);
+            this.label4.Location = new System.Drawing.Point(473, 77);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 15);
             this.label4.TabIndex = 16;
@@ -258,30 +282,6 @@
             this.label1.Size = new System.Drawing.Size(345, 25);
             this.label1.TabIndex = 14;
             this.label1.Text = "VENTA DE PRODUCTOS AL CONTADO";
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ITEM";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "DESCRIPCION DEL PRODUCTO";
-            this.columnHeader2.Width = 215;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "CANTIDAD";
-            this.columnHeader3.Width = 110;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "PRECIO";
-            this.columnHeader4.Width = 110;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "SUBTOTAL";
-            this.columnHeader5.Width = 110;
             // 
             // frmContado
             // 

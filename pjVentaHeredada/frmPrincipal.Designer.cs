@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 117);
+            this.ClientSize = new System.Drawing.Size(433, 113);
             this.Controls.Add(this.btnContado);
             this.Controls.Add(this.btnCredito);
             this.Controls.Add(this.label1);
