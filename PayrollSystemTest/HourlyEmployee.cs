@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PayrollSystemTest
+{
+    // HourlyEmployee class that extends Employee
+    public class HourlyEmployee : Employee
+    {
+        private decimal wage; // wage per hour
+        private decimal hours; // hours worked for the week
+        public HourlyEmployee(string firstname, string lastname
+            , string socialSecurityNumber, decimal hourlyWage, 
+            decimal hoursWorked) : base(firstname, lastname, socialSecurityNumber)
+        {
+            Wage = hourlyWage;
+            Hours = hoursWorked;
+        }
+
+        public decimal Wage 
+        { 
+            get => wage;
+            set 
+            {
+                if (value < 0) // validation
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value),
+                        value, $"{nameof(Wage)} must be => 0");
+                }
+                wage = value;
+            } 
+        }
+
+        public decimal Hours 
+        { 
+            get => hours;
+            set 
+            { 
+                if (value < 0 || value >168) // validation
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value),
+                        value, $"{nameof(Hours)} must be >= 0 and <= 168");
+                }
+                hours = value; 
+            }
+        }
+
+        // calculate earnings; override Employee´s abstract method Earnings
+        public override decimal Earnings()
+        {
+            if (Hours <= 40) // no overtime
+                return Wage * Hours;
+            else
+                return (40 * Wage) + (Hours - 40) * Wage * 1.5M;
+        }
+
+        // return string representation of HourlyEmployee object
+        public override string ToString() =>
+            $"hourly employee: {base.ToString()}\n" +
+            $"hourly wage: {Wage:C} ";
+    }
+}
