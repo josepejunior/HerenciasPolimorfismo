@@ -13,7 +13,8 @@ namespace PayrollSystemTest
 
         // four-parameter constructor
         public SalariedEmployee(string firstname, string lastname, 
-            string socialSecurityNumber, decimal weeklySalary) : base(firstname, lastname, socialSecurityNumber)
+            string socialSecurityNumber, decimal weeklySalary) 
+            : base(firstname, lastname, socialSecurityNumber)
         {
             WeeklySalary = weeklySalary;
         }

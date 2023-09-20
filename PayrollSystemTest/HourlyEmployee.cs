@@ -19,6 +19,7 @@ namespace PayrollSystemTest
             Hours = hoursWorked;
         }
 
+        // property that gets and sets hourly employee`s wage
         public decimal Wage 
         { 
             get => wage;
@@ -33,6 +34,7 @@ namespace PayrollSystemTest
             } 
         }
 
+        // property that gets and sets hourly employee`s hours
         public decimal Hours 
         { 
             get => hours;
@@ -59,6 +61,6 @@ namespace PayrollSystemTest
         // return string representation of HourlyEmployee object
         public override string ToString() =>
             $"hourly employee: {base.ToString()}\n" +
-            $"hourly wage: {Wage:C} ";
+            $"hourly wage: {Wage:C}\nhours worked: {Hours:F2}";
     }
 }

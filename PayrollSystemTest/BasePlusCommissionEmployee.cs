@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace PayrollSystemTest
 {
-    // BasePlusComissionEmplyee class extends ComissionEmployee
-    public class BasePlusComissionEmproyee : ComissionEmployee
+    // BasePlusCommissionEmplyee class extends ComissionEmployee
+    public class BasePlusCommissionEmployee : CommissionEmployee
     {
         private decimal baseSalary; // base salary per week
 
         // six parameter constructor
-        public BasePlusComissionEmproyee(string firstname, string lastname,
+        public BasePlusCommissionEmployee(string firstname, string lastname,
             string socialSecurityNumber, decimal grossSales,
-            decimal comissionRate, decimal baseSalary) 
-            : base(firstname, lastname, socialSecurityNumber, grossSales, comissionRate)
+            decimal commissionRate, decimal baseSalary) 
+            : base(firstname, lastname, socialSecurityNumber, grossSales, commissionRate)
         {
             BaseSalary = baseSalary;
         }
@@ -38,7 +38,7 @@ namespace PayrollSystemTest
         // Calculate earnings
         public override decimal Earnings() => BaseSalary + base.Earnings();
 
-        // return string representation of BasePlusComissionEmployee
+        // return string representation of BasePlusCommissionEmployee
         public override string ToString() =>
             $"base-salaried {base.ToString()}\n" +
             $"base salary: {BaseSalary:C}";

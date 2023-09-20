@@ -24,7 +24,7 @@ namespace PayrollSystemTest
 
         // return string representation of Employee object, using properties
         public override string ToString() => $"{FirstName} {LastName}\n" +
-            $"{SocialSecurityNumber}";
+            $"social security number: {SocialSecurityNumber}";
 
         // abstract method overridden by derived classes
         public abstract decimal Earnings(); // no implementation here
