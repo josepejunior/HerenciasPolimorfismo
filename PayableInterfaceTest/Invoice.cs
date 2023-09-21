@@ -18,10 +18,10 @@ namespace PayableInterfaceTest
         public Invoice(string partNumber, string partDescription,
             int quantity, decimal pricePerItem)
         {
-            this.PartNumber = partNumber;
-            this.PartDescription = partDescription;
-            this.Quantity = quantity; // validate quantity
-            this.PricePerItem = pricePerItem; // validate price per item
+            PartNumber = partNumber;
+            PartDescription = partDescription;
+            Quantity = quantity; // validate quantity
+            PricePerItem = pricePerItem; // validate price per item
         }
 
 
