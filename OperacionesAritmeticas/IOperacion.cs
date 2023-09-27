@@ -7,10 +7,15 @@ using System.Threading.Tasks;
 namespace OperacionesAritmeticas
 {
     // declarando interfaz IOperacion
-    internal interface IOperacion
+    public interface IOperacion
     {
-        double GetOperacion(); // hacer las respectivas operaciones
+        double Result { get; set; }
 
-        string ToString() => "Resultado de la";// imprime las respectivas operaciones
+        void Calcular(double op1, double op2);
+
+        void Mostrar()
+        {
+            Console.WriteLine("El resultado es {0}", Result);
+        }
     }
 }

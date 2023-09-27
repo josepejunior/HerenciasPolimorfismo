@@ -8,18 +8,11 @@ namespace OperacionesAritmeticas
 {
     public class Multiplicacion : IOperacion
     {
-        public int Numero1 { get; set; }
-        public int Numero2 { get; set; }
+        public double Result { get; set; }
 
-        // constructor de la clase
-        public Multiplicacion(int numero1, int numero2)
+        public void Calcular(double op1, double op2)
         {
-            Numero1 = numero1;
-            Numero2 = numero2;
+            Result = op1 * op2;
         }
-
-        // implementando método GetOperacion de IOperacion
-        public double GetOperacion() => Numero1 * Numero2;
-        public override string ToString() => $"{base.ToString()} multiplicación: {GetOperacion():F2}";
     }
 }

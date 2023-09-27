@@ -16,7 +16,20 @@ Console.WriteLine("Invoice and Employees processed" +
 // generically process each element in payableObjects
 foreach (var payable in payableObjects)
 {
+    // output payable ant its appropiate payment amount
     Console.WriteLine($"{payable}");
     Console.WriteLine(
         $"payment due: {payable.GetPaymentAmount():C}\n");
+}
+
+/****************************************************************/
+
+using(IPayableSerializer serializer = new PayableFileSerializer())
+{
+    serializer.WritePayableObjects(payableObjects);
+}
+
+using (IPayableSerializer serializer = new PayableExcelSerializer())
+{
+    serializer.WritePayableObjects(payableObjects);
 }

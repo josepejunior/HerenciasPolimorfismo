@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayrollSystemTest", "Payrol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayableInterfaceTest", "PayableInterfaceTest\PayableInterfaceTest.csproj", "{1AD47F28-974F-4CA8-9BAE-FF4BF29EBD63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperacionesAritmeticasInterface", "OperacionesAritmeticas\OperacionesAritmeticasInterface.csproj", "{9A47D64B-C26B-4326-A579-F828089706C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OperacionesAritmeticasInterface", "OperacionesAritmeticas\OperacionesAritmeticasInterface.csproj", "{9A47D64B-C26B-4326-A579-F828089706C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaIComparable", "IPruebaComparator\PruebaIComparable.csproj", "{314EDD91-4C34-41C9-B86B-9AF64BA715F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{9A47D64B-C26B-4326-A579-F828089706C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A47D64B-C26B-4326-A579-F828089706C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A47D64B-C26B-4326-A579-F828089706C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{314EDD91-4C34-41C9-B86B-9AF64BA715F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{314EDD91-4C34-41C9-B86B-9AF64BA715F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{314EDD91-4C34-41C9-B86B-9AF64BA715F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{314EDD91-4C34-41C9-B86B-9AF64BA715F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
